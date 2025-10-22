@@ -1,12 +1,3 @@
-##!/bin/bash
-#if ! hyprctl clients | grep -q "class: Alacritty"; then
-#    alacritty &
-#    sleep 1
-#    hyprctl dispatch workspace special:scratchpad
-#    hyprctl dispatch focuswindow class:Alacritty
-#else
-#    hyprctl dispatch togglespecialworkspace scratchpad
-#fi
 #!/bin/bash
 if ! hyprctl clients | grep -q "class: Alacritty"; then
     killall -q -9 alacritty 2>/dev/null  # Clean up lingering processes
