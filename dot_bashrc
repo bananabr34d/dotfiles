@@ -1,0 +1,53 @@
+# All the default Omarchy aliases and functions
+# (don't mess with these directly, just overwrite them here!)
+source ~/.local/share/omarchy/default/bash/rc
+
+# Add your own exports, aliases, and functions here.
+#
+# Make an alias for invoking commands you use constantly
+# alias p='python'
+
+# eza aliases for enhanced directory listing
+alias l='eza -l --icons --group-directories-first'          # Long listing, directories first, no hidden files
+alias la='eza -la --icons --group-directories-first'        # Long listing, show all (including hidden)
+alias ll='eza -la --icons --group-directories-first --git'  # Long listing with hidden files and git status
+alias lx='eza -l --icons --sort=extension'                  # Sort by extension
+alias lS='eza -l --icons --sort=size --reverse'             # Sort by size, largest first
+alias ltS='eza -l --icons --sort=time --reverse'            # Sort by modification time, newest first
+
+# Grep with color output (inspired by Ubuntu defaults)
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# Common navigation and file management aliases
+alias cp='cp -i'                                    # Prompt before overwrite
+alias mv='mv -i'                                    # Prompt before overwrite
+alias rm='rm -i'                                    # Prompt before overwrite
+alias df='df -h'                                    # Human-readable disk usage
+alias du='du -h'                                    # Human-readable directory size
+alias free='free -h'                                # Human-readable memory usage
+
+# Ubuntu-inspired safety and convenience aliases
+alias mkdir='mkdir -p'                              # Create parent directories as needed
+alias less='less -R'                                # Preserve colors in less
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+# Git aliases for frequent commands
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit -m'
+alias gp='git push'
+alias gd='git diff'
+alias gl='git log --oneline --graph --all'
+alias lg='lazygit'
+
+# Miscellaneous productivity aliases
+alias c='clear'                                     # Clear terminal
+alias h='history'                                   # Show command history
+alias j='jobs -l'                                   # List jobs with details
+alias vi='nvim'                                     # Use vim instead of vi
+alias nv='nvim'                                     # Use vim instead of vi
+alias please='sudo'                                 # Polite sudo alias
+alias reload='source ~/.bashrc'                     # Reload bashrc
+alias path='echo -e ${PATH//:/\\n}'                 # Pretty-print PATH
