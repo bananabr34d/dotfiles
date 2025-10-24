@@ -1,3 +1,6 @@
+# If not running interactively, don't do anything (leave this at the top of this file)
+[[ $- != *i* ]] && return
+
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
@@ -51,3 +54,6 @@ alias nv='nvim'                                     # Use vim instead of vi
 alias please='sudo'                                 # Polite sudo alias
 alias reload='source ~/.bashrc'                     # Reload bashrc
 alias path='echo -e ${PATH//:/\\n}'                 # Pretty-print PATH
+alias tst='tailscale status'                        # Check the status of the tailscale network
+alias tsu='tailscale up'                            # Tailscale up
+alias tsu='tailscale down'                          # Tailscale down
