@@ -11,9 +11,9 @@ source ~/.local/share/omarchy/default/bash/rc
 # alias p='python'
 
 # eza aliases for enhanced directory listing
-alias l='eza -lh --icons --group-directories-first'          # Long listing, directories first, no hidden files
-alias la='eza -lah --icons --group-directories-first'        # Long listing, show all (including hidden)
-alias ll='eza -lah --icons --group-directories-first --git'  # Long listing with hidden files and git status
+alias l='eza -lhg --icons --group-directories-first'          # Long listing, directories first, no hidden files
+alias la='eza -lahg --icons --group-directories-first'        # Long listing, show all (including hidden)
+alias ll='eza -lahg --icons --group-directories-first --git'  # Long listing with hidden files and git status
 alias lx='eza -l --icons --sort=extension'                   # Sort by extension
 alias lS='eza -lh --icons --sort=size --reverse'             # Sort by size, largest first
 alias ltS='eza -lh --icons --sort=time --reverse'            # Sort by modification time, newest first
