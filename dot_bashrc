@@ -57,3 +57,26 @@ alias path='echo -e ${PATH//:/\\n}'                 # Pretty-print PATH
 alias tst='tailscale status'                        # Check the status of the tailscale network
 alias tsu='tailscale up'                            # Tailscale up
 alias tsu='tailscale down'                          # Tailscale down
+
+# Chezmoi aliases
+alias cm='chezmoi'
+alias cma='chezmoi apply'                           # Apply changes to your dotfiles
+alias cme='chezmoi edit'                            # Edit a specific dotfile
+alias cmcd='chezmoi cd'                             # Jump to your Chezmoi source directory
+alias cmst='chezmoi status'                         # Check the status of your dotfiles
+alias cmd='chezmoi diff'                            # Show differences between source and target
+alias cmu='chezmoi update'                          # Pull and apply changes from the repo
+alias cmadd='chezmoi add'                           # Add a new file to Chezmoi
+alias cmpush='chezmoi git push'                     # Push changes to your remote repo
+alias cmpull='chezmoi git pull'                     # Pull changes from your remote repo
+alias cmc='chezmoi git commit -m'                   # Commit changes with a message
+alias cmg='chezmoi git'                             # Run arbitrary Git commands in the Chezmoi repo
+alias cmpull='chezmoi git pull'                     # Pull changes from your remote repo
+alias cmc='chezmoi git commit -m'                   # Commit changes with a message
+alias cmg='chezmoi git'                             # Run arbitrary Git commands in the Chezmoi repo
+alias cmsync='chezmoi update && chezmoi apply'      # Pull and apply in one go
+alias cmv='chezmoi verify'                          # Verify that dotfiles match the source
+alias cmf='chezmoi forgot'                          # Remove unmanaged files from Chezmoimoi add'
+alias cmls='chezmoi managed'                        # List all managed files
+alias cmun='chezmoi unmanaged'                      # List unmanaged files in your home directory
+alias cmre='chezmoi re-add'                         # Re-add all managed files to update their state
